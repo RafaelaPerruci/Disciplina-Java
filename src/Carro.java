@@ -1,31 +1,24 @@
-public class Carro {
-    private String marca;
-    private String modelo;
-    public Carro(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+public class Carro extends Veiculo{
+    private int numPortas;
+
+    public Carro(String marca, String modelo, int anoFab, int numPortas){
+        super(marca, modelo, anoFab);
+        this.numPortas = numPortas;
     }
     public Carro(){
 
     }
-
-    public String getMarca() {
-        return marca;
+    public int getNumPortas() {
+        return numPortas;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setNumPortas(int numPortas) {
+        this.numPortas = numPortas;
     }
-
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-    public void mostrarDetalhes(){
-        System.out.printf("Novo carro - Marca: %s, Modelo: %s", this.marca, this.modelo);
+    public void imprimirDetalhes(){
+        System.out.println("Marca:" + this.marca);
+        System.out.println("Modelo:" + this.modelo);
+        System.out.println("Ano de fabricação:" + this.anoFab);
+        System.out.println("Número de portas:" + this.numPortas);
     }
 }
